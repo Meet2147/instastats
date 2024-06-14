@@ -19,7 +19,7 @@ async def get_profile(username: str):
         }
         return profile_data
     except Exception as e:
-        raise HTTPException(status_code=404, detail="Profile not found")
+        raise HTTPException(status_code=404, detail=e)
 
 if __name__ == "__main__":
     import uvicorn
